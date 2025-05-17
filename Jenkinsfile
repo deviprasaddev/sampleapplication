@@ -28,6 +28,7 @@ pipeline {
     stage('Configure Kubeconfig') {
       steps {
         sh """
+          aws sts get-caller-identity
           aws eks list-clusters --region ${AWS_REGION}
           aws eks update-kubeconfig \
             --region ${AWS_REGION} \
