@@ -28,6 +28,7 @@ pipeline {
     stage('Configure Kubeconfig') {
       steps {
         sh """
+          aws eks update-kubeconfig --region ${AWS_REGION}
           aws eks update-kubeconfig \
             --region ${AWS_REGION} \
             --name ${EKS_CLUSTER_NAME}
