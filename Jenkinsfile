@@ -3,7 +3,7 @@ pipeline {
 
   environment {
     AWS_REGION = 'us-east-1'
-    EKS_CLUSTER_NAME = 'dev-eks'
+    EKS_CLUSTER_NAME = 'devi-eks'
   }
 
   stages {
