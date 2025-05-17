@@ -13,6 +13,18 @@ pipeline {
       }
     }
 
+    stage('Echo') {
+      steps {
+        echo "✅ Jenkinsfile is working and checkout was successful."
+      }
+    }
+
+    stage('List Files') {
+      steps {
+        sh 'ls -la'
+      }
+    }
+
     stage('Configure Kubeconfig') {
       steps {
         sh """
