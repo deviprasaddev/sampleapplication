@@ -12,11 +12,6 @@ pipeline {
         checkout scm
       }
     }
-    #stage('Checkout') {
-    #  steps {
-    #    git 'https://github.com/deviprasaddev/sampleapplication.git'
-    #  }
-    #}
 
     stage('Echo') {
       steps {
